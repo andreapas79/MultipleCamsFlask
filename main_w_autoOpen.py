@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response
 import cv2
+import SelfOpen
 
 
 app = Flask(__name__)
@@ -27,4 +28,6 @@ def video_feed(id):
     return Response(genFrames(id), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
+
+    SelfOpen.open_Ip()
     app.run(host='0.0.0.0', port=3000)
