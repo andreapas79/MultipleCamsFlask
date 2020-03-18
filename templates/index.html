@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiCamStreaming</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>Camera 0</p>
+                <img src="{{ url_for('video_feed', id='0') }}" width="100%">
+            </td>
+            <td>
+                <p>Camera 1</p>
+                <img src="{{ url_for('video_feed', id='1') }}" width="100%">
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
