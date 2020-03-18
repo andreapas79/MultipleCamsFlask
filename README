@@ -1,0 +1,30 @@
+English
+Main.py - main file, starting which creates a web server at your IP address, at port 3000 (e.g. 192.168.1.100:3000)
+where webcams connected to the computer can be viewed on your LAN.
+
+Inside the html index file I call the video_feed function by passing it the 'id' parameter.
+
+Video_feed function receives as a parameter a webcam id which is passed through a GET method from the html page,
+in this specific case from index html. This parameter is passed to the genFrames function to select the webcam.
+
+GenFrames function, receives the webcam identification parameter, this parameter is passed to the cs2.VideoCapture (id)
+function to identify the webcam for the video stream, from here the frame is passed through the yield function as a
+jpeg frame.
+Within the function through an if control it is possible to manipulate or add particular characteristics to the
+captured frame.
+
+
+ITALIAN
+Main.py - file principale, avviando il quale viene creato un web server al proprio indirizzo IP, alla porta 3000
+(es. 192.168.1.100:3000) dove possono essere visualizzate all'interno della propria LAN le webcam collegate al computer.
+
+All'interno del file index html richiamo la funzione video_feed passandogli il parametro 'id'.
+
+Funzione video_feed riceve come paramentro un id della webcam che viene passato tramite un metodo GET dalla pagina html,
+in questo specifico caso da index html. QUesto parametro viene passato alla funzione genFrames per selezionare la webcam.
+
+Funzione genFrames, riceve il parametro identificativo delle webcam, tale parametro viene passato alla funzione
+cs2.VideoCapture(id) per identificare la webcam per lo stream video, da qui il frame viene passato tramite la
+funzione yield come fotogramma jpeg.
+All'interno della funzione attraverso un controllo if è possibile manipolare o aggiungere particolari
+caratteristiche al frame catturato.
